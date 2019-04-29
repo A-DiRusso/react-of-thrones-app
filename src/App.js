@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import axios from 'axios';
+import gotLogo from './images/got-logo-png-1.png';
 
 
 class App extends React.Component {
@@ -20,12 +21,15 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <ul>
-          <li>name: {this.state.character.name}</li>
-          <li>born: {this.state.character.born}</li>
-          <li>culture: {this.state.character.culture}</li>
-        </ul>
+      <div className="App">
+        <header className="App-header">
+          <img src={gotLogo} alt="logo" />
+          <ul>
+            <li>name: {this.state.character.name}</li>
+            <li>born: {this.state.character.born}</li>
+            <li>culture: {this.state.character.culture}</li>
+          </ul>
+        </header>
       </div>
     )
   }
